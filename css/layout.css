@@ -1,4 +1,3 @@
-
 /* Header */
 header {
   background: var(--bg-secondary);
@@ -36,13 +35,19 @@ nav a {
 .card {
   background: var(--bg-secondary);
   border: 3px solid var(--accent-school);
-  border-radius: 6px;
-  padding: 1.25rem;
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
   text-align: center;
-  transition: transform 0.2s ease;
+  transition: 
+    transform 0.2s cubic-bezier(.4,2,.6,1),
+    box-shadow 0.2s cubic-bezier(.4,2,.6,1),
+    border-color 0.2s;
+  box-shadow: 0 2px 16px rgba(31, 57, 108, 0.07);
 }
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(31, 57, 108, 0.13);
+  border-color: var(--accent-lu);
 }
 .card img {
   max-width: 70px;
@@ -62,11 +67,55 @@ nav a {
 .card.riseba { border-color: var(--accent-riseba); }
 .card.lu     { border-color: var(--accent-lu); }
 
+/* Hero Section */
+.hero {
+  background: linear-gradient(90deg, var(--accent-school) 0%, var(--accent-lu) 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 2rem 0 2.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(31, 57, 108, 0.08);
+}
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: #f8f8f8;
+  margin-bottom: 0;
+}
+
 /* Summary Section */
 .summary {
-  padding: 1.5rem 0;
-  font-size: 1rem;
+  background: linear-gradient(90deg, var(--bg-secondary) 80%, var(--accent-school) 100%);
+  border-radius: 10px;
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-size: 1.05rem;
   color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
+}
+
+/* Container Improvements */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+/* Sticky Navigation */
+nav.container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-secondary);
+  box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
+  border-radius: 0 0 12px 12px;
 }
 
 /* Footer */
@@ -87,4 +136,9 @@ footer a { margin: 0 0.5rem; }
   cursor: pointer;
   color: var(--text-main);
   padding: 0.25rem;
+}
+
+/* Theme Transition */
+body, .card, .summary, .container, nav, header, footer {
+  transition: background 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
