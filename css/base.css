@@ -9,9 +9,11 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   background-color: var(--bg-primary);
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxkZWZzPgo8cGF0dGVybiBpZD0iZGlnaXRhbERvdHMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+Cgk8Y2lyY2xlIGN4PSI0IiBjeT0iNCIgcj0iMiIgZmlsbD0iI0ZGREQ0MCIvPgoJPGNpcmNsZSBjeD0iOCIgeT0iOCIgcj0iMiIgZmlsbD0iIzhDMEMwNCIvPgoJPGNpcmNsZSBjeD0iMCIgY3k9IjAiIHI9IjIiIGZpbGw9IiMxRjM5NkMiLz4KPC9wYXR0ZXJuPgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9InVybCgjZGlnaXRhbERvdHMpIi8+Cjwvc3ZnPg==");
-  background-repeat: repeat;
-  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 221, 64, 0.3) 1px, transparent 1px),
+                    radial-gradient(circle at 75% 75%, rgba(140, 12, 4, 0.3) 1px, transparent 1px),
+                    radial-gradient(circle at 50% 50%, rgba(31, 57, 108, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 20px 20px;
+  background-position: 0 0, 10px 10px, 5px 5px;
   color: var(--text-main);
   line-height: 1.5;
 }
