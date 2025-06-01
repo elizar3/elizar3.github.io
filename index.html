@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
 
-  <!-- CSS Variables & Base Styles -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/vars.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
@@ -14,9 +14,7 @@
 <body>
   <!-- Header -->
   <header class="container flex" style="justify-content: space-between; align-items: center;">
-    <div class="logo">
-      Skola <span style="color:var(--accent-riseba)">‒</span> Uni Salīdzinājums
-    </div>
+    <div class="logo">Skola <span style="color:var(--accent-riseba)">‒</span> Uni Salīdzinājums</div>
     <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌓</button>
   </header>
 
@@ -31,35 +29,24 @@
     </ul>
   </nav>
 
-  <section class="hero">
-    <h1>Digitālo rīku salīdzinājums: Skola vs. Universitātes</h1>
-    <p>
-      Kā Rīgas 6. vidusskola, RISEBA un Latvijas Universitāte izmanto digitālās platformas mācību procesā?  
-      Uzzini galvenās atšķirības un priekšrocības!
-    </p>
-  </section>
-
   <!-- Main Content -->
   <main class="container">
+    <section class="hero">
+        <h1>Digitālo rīku salīdzinājums: Skola vs. Universitātes</h1>
+        <p>
+        Kā Rīgas 6. vidusskola, RISEBA un Latvijas Universitāte izmanto digitālās platformas mācību procesā?  
+        Uzzini galvenās atšķirības un priekšrocības!
+        </p>
+    </section>
     <!-- Summary of Findings -->
     <section class="summary">
       <p>
-        Šajā projektā mēs salīdzinām, kā <strong>Rīgas 6. vidusskola</strong> (R6vsk), <strong>RISEBA</strong> un <strong>Latvijas Universitāte</strong> izmanto digitālos rīkus un platformas mācību procesā. :contentReference[oaicite:2]{index=2}
-      </p>
-      <p>
-        R6vsk galvenokārt balstās uz <em>EduPage</em> platformu, nodrošinot stundu sarakstus, skolēnu paziņojumus un drošu datu šifrēšanu ar redundantu dublēšanu uz diviem fiziskiem serveriem. :contentReference[oaicite:3]{index=3}
-      </p>
-      <p>
-        RISEBA jau kopš 2006. gada izmanto Moodle bāzētu e-mācību sistēmu <em>e.RISEBA</em>, piedāvājot studentiem plašu kursu klāstu latviešu un angļu valodā. :contentReference[oaicite:4]{index=4}
-      </p>
-      <p>
-        Tāpat RISEBA izstrādājusi <em>Digiteka</em> projektu, kurā integrēta <em>Motival</em> tehnoloģija, lai identificētu studentu digitālās prasmes un piedāvātu personalizētus kursus. :contentReference[oaicite:5]{index=5}
-      </p>
-      <p>
-        Latvijas Universitātē darbojas modernizēta <em>E-studijas</em> platforma (Moodle bāzēta), kurā pasniedzēji var pielāgot kursu noformējumu, pievienot video konferences un glabāt lekcijas mākoņī. :contentReference[oaicite:6]{index=6}
-      </p>
-      <p>
-        LU arī piedalās valsts līmeņa “Digitālās studiju procesa” iniciatīvā, kas vērsta uz fleksiblu, studentcentrētu tiešsaistes mācību vidi un vienotu praktisko digitālo rīku ieviešanu. :contentReference[oaicite:7]{index=7}
+        Šajā projektā mēs salīdzinām, kā <strong>Rīgas 6. vidusskola</strong> (R6vsk), <strong>RISEBA</strong> un <strong>Latvijas Universitāte</strong> izmanto digitālos rīkus un platformas mācību procesā.  
+        R6vsk izmanto <strong>EduPage</strong> platformu, kurā visi dati tiek šifrēti un dublēti uz diviem fiziskiem serveriem, kas nodrošina pilnīgu datu pieejamību un drošību :contentReference[oaicite:1]{index=1}.  
+        RISEBA darbojas Moodle bāzētā e-mācību sistēmā <strong>e.RISEBA</strong>, kas ieviesta kopš 2006. gada, nodrošinot studentiem materiālus un interaktīvas iespējas kursu izpildei :contentReference[oaicite:2]{index=2}.  
+        Papildus tam RISEBA piedāvā <strong>Digiteka</strong> — personalizētu digitālo prasmju identifikācijas platformu ar integrētu Motival tehnoloģiju, kas palīdz studentiem izvēlēties atbilstošus digitālos kursus :contentReference[oaicite:3]{index=3}.  
+        Latvijas Universitātē darbojas modernizēts <strong>E-studijas</strong> portāls (bāzēts uz Moodle), kas ļauj pasniedzējiem pielāgot kursu noformējumu, pievienot kursu attēlus un izmantot video konferenču iespējas, turklāt lekcijas tiek glabātas mākonī :contentReference[oaicite:4]{index=4}.  
+        LU aktīvi piedalās “Studiju procesa digitalizācijas” iniciatīvā, lai veicinātu studentcentrētu un elastīgu tiešsaistes mācību vidi :contentReference[oaicite:5]{index=5}.
       </p>
     </section>
 
@@ -70,9 +57,9 @@
         <img src="icons/r6vsk.svg" alt="R6vsk ikona" />
         <h3>R6vsk (EduPage)</h3>
         <p>
-          Rīgas 6. vidusskola izmanto <strong>EduPage</strong> platformu stundu sarakstiem, skolēnu paziņojumiem un tiešsaistes mācību materiāliem. :contentReference[oaicite:8]{index=8}  
-          Visi dati ir šifrēti un dublēti uz diviem fiziskiem serveriem, nodrošinot augstu drošības līmeni. :contentReference[oaicite:9]{index=9}  
-          Skolotāji ievieto mājasdarbus, paziņojumus un informāciju par pasākumiem, taču plašāka kursu pielāgošana nav pieejama. :contentReference[oaicite:10]{index=10}
+          Rīgas 6. vidusskola izmanto <strong>EduPage</strong> platformu stundu sarakstiem, skolēnu paziņojumiem un tiešsaistes mācību materiāliem.  
+          EduPage garantē datu šifrēšanu un dublēšanu uz diviem serveriem, lai nodrošinātu drošību un pieejamību :contentReference[oaicite:6]{index=6}.  
+          Skolotāji ievieto mājasdarbus, paziņojumus un informāciju par pasākumiem, tomēr plašāku kursu pielāgošanas iespēju nav.
         </p>
       </div>
 
@@ -81,10 +68,9 @@
         <img src="icons/riseba.svg" alt="RISEBA ikona" />
         <h3>RISEBA (e.RISEBA)</h3>
         <p>
-          RISEBA izmanto Moodle bāzētu e-mācību sistēmu <strong>e.RISEBA</strong>, kas ieviesta 2006. gadā, lai atbalstītu studijas latviešu un angļu valodā. :contentReference[oaicite:11]{index=11}  
-          Šajā sistēmā studentiem ir pieejami lekciju materiāli, testi un interaktīvi resursi. :contentReference[oaicite:12]{index=12}  
-          <strong>Digiteka</strong> projekts integrē <strong>Motival</strong> tehnoloģiju, lai identificētu digitālās prasmes un rekomendētu atbilstošus kursus. :contentReference[oaicite:13]{index=13}  
-          RISEBA bibliotēkas e-resursi nodrošina piekļuvi plašām akadēmiskajām un profesionālajām datu bāzēm. :contentReference[oaicite:14]{index=14}
+          RISEBA izmanto Moodle bāzētu e-mācību sistēmu <strong>e.RISEBA</strong> kopš 2006. gada, kur fakultātes locekļi publicē studiju materiālus un nodrošina interaktīvu komunikāciju ar studentiem :contentReference[oaicite:7]{index=7}.  
+          RISEBA piedāvā arī <strong>Digiteka</strong> – platformu, kas integrē Motival tehnoloģiju, lai noteiktu studentu digitālās prasmes un piedāvātu personalizētus kursus :contentReference[oaicite:8]{index=8}.  
+          Universitātes bibliotēkas portālā pieejamas plašas e-resursu datu bāzes, tostarp akadēmiskās, biznesa un medicīnas publikācijas :contentReference[oaicite:9]{index=9}.
         </p>
       </div>
 
@@ -93,10 +79,10 @@
         <img src="icons/lu.svg" alt="LU ikona" />
         <h3>LU (E-studijas)</h3>
         <p>
-          Latvijas Universitātē darbojas <strong>E-studijas</strong> platforma, kas bāzēta uz Moodle un nesen pārveidota ar jaunu dizainu, ļaujot pasniedzējiem pielāgot kursu attēlus un vizuālo izskatu. :contentReference[oaicite:15]{index=15}  
-          Sistēmā ir iebūvētas video konferences iespējas, un lekcijas tiek glabātas mākonī, nodrošinot attālinātu piekļuvi kursu materiāliem. :contentReference[oaicite:16]{index=16}  
-          LU piedalās projektā “Digitālās studiju procesa iniciatīvas”, kas ievieš vienotus digitālos risinājumus piecās vadošajās Latvijas augstskolās, tostarp RISEBA un citiem partneriem. :contentReference[oaicite:17]{index=17}  
-          Projekts ir līdzfinansēts no Eiropas Sociālā fonda, lai uzlabotu digitālās kompetences un studiju kvalitāti. :contentReference[oaicite:18]{index=18}
+          LU izmanto modernizētu <strong>E-studijas</strong> platformu, kas ļauj pasniedzējiem pielāgot kursu noformējumu, pievienot kursu attēlus un izmantot video konferences, balstoties uz <em>BigBlueButton</em> risinājumu :contentReference[oaicite:10]{index=10}.  
+          Lekcijas tiek glabātas mākonī, nodrošinot piekļuvi materiāliem attālināti :contentReference[oaicite:11]{index=11}.  
+          LU ir viena no līdzdibinātājām VPC (Vienotais pakalpojumu centrs), kas īsteno “Studiju procesa digitalizāciju” visā Latvijas augstskolu tīklā :contentReference[oaicite:12]{index=12}.  
+          Šī iniciatīva paredz ieviest studentcentrētus risinājumus, kas uzlabo studiju kvalitāti un veicina starptautisko konkurētspēju :contentReference[oaicite:13]{index=13}.
         </p>
       </div>
     </section>
@@ -104,10 +90,10 @@
     <!-- Comparison Summary Footer -->
     <section class="summary">
       <p>
-        <strong>Kopsavilkums:</strong>  
-        Skola (R6vsk) nodrošina pamata e-rīkus (stundu saraksti, paziņojumi) caur EduPage, taču bez plašas kursu pielāgošanas iespējas. :contentReference[oaicite:19]{index=19}  
-        RISEBA piedāvā Moodle vidi (e.RISEBA) ar Digiteka personalizēto prasmju identifikāciju un bagātīgu e-resursu portfeli. :contentReference[oaicite:20]{index=20}  
-        LU izmanto modernizētu E-studijas platformu ar video konferencēm, mākonī glabātu lekciju materiāliem un studentcentrētu pieeju digitālajai transformācijai. :contentReference[oaicite:21]{index=21}
+        <strong>Kopsavilkums:</strong><br>
+        • Skola (R6vsk) nodrošina pamata e-rīkus (stundu saraksti, paziņojumi) caur EduPage, tomēr bez plašām kursu pielāgošanas iespējām :contentReference[oaicite:14]{index=14}.<br>
+        • RISEBA piedāvā visaptverošu Moodle vidi (e.RISEBA), kas ietver kursu datubāzi, Digiteka personiskās prasmju atpazīšanas iespējas un bagātīgu e-resursu portfeli :contentReference[oaicite:15]{index=15}.<br>
+        • LU izmanto modernizētu E-studijas platformu ar video konferences, mākonī glabātu lekciju un kursu pielāgošanas iespējām, kā arī aktīvi darbojas “Studiju procesa digitalizācijas” iniciatīvā :contentReference[oaicite:16]{index=16}.
       </p>
     </section>
   </main>
@@ -122,7 +108,7 @@
     </p>
   </footer>
 
-  <!-- JS for Theme Toggle -->
+  <!-- JS -->
   <script src="js/theme-toggle.js" defer></script>
 </body>
 </html>
