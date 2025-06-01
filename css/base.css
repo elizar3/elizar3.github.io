@@ -25,6 +25,17 @@ a:hover {
 .text-center { text-align: center; }
 .flex { display: flex; }
 .flex-center { justify-content: center; align-items: center; }
+.items-center { align-items: center; }
+.pill {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hide bullet points in lists by default */
+ul { list-style: none; }
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
 
 /* Heading styles */

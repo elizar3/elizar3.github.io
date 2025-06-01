@@ -1,41 +1,73 @@
-/* ─────────── Header & Navigation ─────────── */
+/* ─────────── HEADER / NAV BAR ─────────── */
 
-/* Header */
-header {
-  background: var(--bg-secondary);
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #CCC;
-}
-header .logo {
-  font-size: 1.5rem;
-  color: var(--accent-school);
-}
-
-/* Sticky Navigation */
-nav.container {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: var(--bg-secondary);
-  border-top: 1px solid #CCC;
-  box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-
+header.app-bar {
+  background: linear-gradient(
+    90deg,
+    var(--accent-school) 0%,
+    var(--accent-lu) 100%
+  );
   padding: 1rem 0;
+  border-bottom: 4px solid var(--accent-riseba);
+
+  border-radius: 0 0 12px 12px;
+
+  box-shadow: 0 4px 12px rgba(31, 57, 108, 0.08);
+  color: #fff;
+}
+
+header.app-bar.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo text */
+header.app-bar .logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+header.app-bar .logo‐sep {
+  color: var(--accent-riseba);
+}
+
+header.app-bar .right‐controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* NAV LINKS */
+.nav-list {
+  display: flex;
+  gap: 1rem;
+
   margin: 0;
+  padding: 0;
 }
-nav a {
-  font-weight: bold;
-  color: var(--text-main);
-  transition: color 0.3s;
+
+.nav-list li a {
+  @apply .pill;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
 }
-nav a:hover {
-  color: var(--accent-lu);
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ACTIVE LINK STATE (optional): add a bottom‐border if you set a “.active” class */
+.nav-list li a.active {
+  border-bottom: 2px solid #fff;
 }
 
 /* ─────────── Hero Section ─────────── */
@@ -113,6 +145,7 @@ nav a:hover {
 .card img {
   height: 120px;
   width: auto;
+  max-width: 100%;
   margin-bottom: 0.75rem;
 }
 .card h3 {
@@ -155,16 +188,20 @@ footer a:hover {
 /* ─────────── Theme Toggle Button ─────────── */
 
 #theme-toggle {
-  background: none;
+  background: rgba(255, 255, 255, 0.15);
   border: none;
-  font-size: 1.3rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
   cursor: pointer;
-  color: var(--text-main);
-  padding: 0.25rem;
-  transition: color 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
-#theme-toggle:hover {
-  color: var(--accent-lu);
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
 }
 
 /* ─────────── Miscellaneous ─────────── */
