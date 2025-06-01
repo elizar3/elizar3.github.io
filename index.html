@@ -3,64 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Salīdzinājums – Sākums</title>
+  <title>Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/vars.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/themes.css" />
 </head>
+
 <body>
-  <header class="container flex flex-center" style="justify-content: space-between;">
-    <div class="logo">[Logo vai Projekta nosaukums]</div>
-    <div>
-      <button id="theme-toggle">🌓</button>
-    </div>
+  <!-- Header -->
+  <header class="container flex" style="justify-content: space-between; align-items: center;">
+    <div class="logo">Skola <span style="color:var(--accent-riseba)">‒</span>Uni Salīdzinājums</div>
+    <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌓</button>
   </header>
 
+  <!-- Navigation Bar -->
   <nav class="container">
     <ul>
       <li><a href="index.html">Sākums</a></li>
       <li><a href="comparison.html">Salīdzinājums</a></li>
       <li><a href="details.html">Detalizēti</a></li>
       <li><a href="about.html">Par mani</a></li>
-      <li><a href="#">Kontakti</a></li>
+      <li><a href="#contacts">Kontakti</a></li>
     </ul>
   </nav>
 
+  <!-- Main Content -->
   <main class="container">
-    <section class="main-content">
-      <!-- R6vsk card -->
-      <div class="card" style="border-color: var(--accent-school);">
-        <img src="icons/r6vsk.svg" alt="R6vsk ikona">
-        <h3>R6vsk</h3>
-        <p>Īss digitālo rīku un platformas apraksts.</p>
+    <!-- Summary of Findings -->
+    <section class="summary">
+      <p>
+        Šajā projektā mēs salīdzinām, kā **Rīgas 6. vidusskola** (R6vsk), **RISEBA** un **Latvijas Universitāte** izmanto digitālos rīkus un platformas mācību procesā.
+        R6vsk galvenokārt balstās uz EduPage platformu, nodrošinot stundu sarakstus, vēstules un paziņojumus, visi dati tiek šifrēti un sekundāri dublēti uz diviem serveriem :contentReference[oaicite:6]{index=6}.
+        RISEBA jau kopš 2006. gada izmanto Moodle bāzētu e-mācību sistēmu e.RISEBA, piedāvājot studentiem plašu kursu klāstu latviešu un angļu valodā :contentReference[oaicite:7]{index=7}.  
+        Turklāt RISEBA “Digiteka” projekts integrē Motival tehnoloģiju, lai identificētu studentu digitālās prasmes un ieteiktu personalizētus kursus :contentReference[oaicite:8]{index=8}.
+        Latvijas Universitātē darbojas modernizēts **E-studijas** portāls (bāzēts uz Moodle), kurā pasniedzēji var pielāgot kursu noformējumu, pievienot video konferences un saglabāt lekcijas mākoņvidē :contentReference[oaicite:9]{index=9}.  
+        LU arī piedalās “Digitālā studiju procesa” iniciatīvā, lai veicinātu studentcentrētu un elastīgu tiešsaistes mācību vidi :contentReference[oaicite:10]{index=10}.
+      </p>
+    </section>
+
+    <!-- Digital Comparison Cards -->
+    <section class="main-cards">
+      <!-- R6vsk Card -->
+      <div class="card school">
+        <img src="icons/r6vsk.svg" alt="R6vsk ikona" />
+        <h3>R6vsk (EduPage)</h3>
+        <p>
+          R6vsk izmanto <strong>EduPage</strong> platformu stundu sarakstiem, skolēnu paziņojumiem un tiešsaistes mācību materiāliem.  
+          Visi dati ir šifrēti un dublēti divos serveros, nodrošinot datu drošību un pieejamību :contentReference[oaicite:11]{index=11}.  
+          Skolotāji ievieto mājasdarbus, paziņojumus un informāciju par pasākumiem, taču plašāka kursu pielāgošana ir ierobežota.
+        </p>
       </div>
-      <!-- RISEBA card -->
-      <div class="card" style="border-color: var(--accent-riseba);">
-        <img src="icons/riseba.svg" alt="RISEBA ikona">
-        <h3>RISEBA</h3>
-        <p>Īss digitālo rīku un platformas apraksts.</p>
+
+      <!-- RISEBA Card -->
+      <div class="card riseba">
+        <img src="icons/riseba.svg" alt="RISEBA ikona" />
+        <h3>RISEBA (e.RISEBA)</h3>
+        <p>
+          RISEBA darbojas Moodle bāzētā e-mācību sistēmā <strong>e.RISEBA</strong>, kas ir ieviesta kopš 2006. gada :contentReference[oaicite:12]{index=12}.  
+          E-platformā ir pieejamas studiju programmas latviešu un angļu valodā, ieskaitot biznesa, mediju un tehnoloģiju studijas :contentReference[oaicite:13]{index=13}.
+          RISEBA piedāvā arī <strong>Digiteka</strong> – personalizētu digitālo prasmju identifikācijas sistēmu ar Motival tehnoloģiju, kas ieteic kursus atbilstoši studentu vajadzībām :contentReference[oaicite:14]{index=14}.  
+          Bibliotēkas e-resursi nodrošina piekļuvi akadēmiskajām un profesionālajām datu bāzēm :contentReference[oaicite:15]{index=15}.
+        </p>
       </div>
-      <!-- LU card (use light or dark accent based on current theme) -->
-      <div class="card lu" style="border-color: var(--accent-lu-light);">
-        <img src="icons/lu.svg" alt="LU ikona">
-        <h3>LU</h3>
-        <p>Īss digitālo rīku un platformas apraksts.</p>
+
+      <!-- LU Card -->
+      <div class="card lu">
+        <img src="icons/lu.svg" alt="LU ikona" />
+        <h3>LU (E-studijas)</h3>
+        <p>
+          LU izmanto <strong>E-studijas</strong> platformu, kas balstīta uz Moodle un nesen ir modernizēta ar jaunu dizainu, ļaujot pasniedzējiem vienkārši pielāgot kursu noformējumu un pievienot kursu attēlus :contentReference[oaicite:16]{index=16}.  
+          Sistēmā ir iebūvētas video konferences iespējas, un lekcijas tiek glabātas mākonī, ļaujot studentiem piekļūt nodarbībām attālināti :contentReference[oaicite:17]{index=17}.  
+          LU aktīvi piedalās valstiskā mēroga “Digitālā studiju procesa” iniciatīvā, lai uzlabotu elastīgu un studentcentrētu tiešsaistes mācību pieredzi :contentReference[oaicite:18]{index=18}.
+        </p>
       </div>
     </section>
 
-    <section class="container text-center">
-      <p>Salīdzinājuma kopsavilkums šeit…</p>
+    <!-- Comparison Summary Footer -->
+    <section class="summary">
+      <p>
+        **Kopsavilkums:**  
+        • Skola (R6vsk) nodrošina pamata e-rīkus (stundu saraksti, paziņojumi) caur EduPage, taču bez plašas kursu pielāgošanas iespējas.  
+        • RISEBA piedāvā visaptverošu Moodle vidi (e.RISEBA), kas ietver kursu datubāzi, Digiteka personalizēto prasmju atpazīšanu un bagātīgu e-resursu portfeli.  
+        • LU izmanto modernizētu E-studijas platformu ar video konferences, mākonī glabātu lekciju un kursa pielāgošanas iespējām, piedaloties valsts digitālās transformācijas procesā.
+      </p>
     </section>
   </main>
 
-  <footer class="container">
-    <p>© 2025 Vārds Uzvārds | 
-      <a href="https://twitter.com/yourprofile">Twitter</a> | 
-      <a href="mailto:you@uni.lv">you@uni.lv</a>
+  <!-- Footer -->
+  <footer class="container" id="contacts">
+    <p>
+      © 2025 Vārds Uzvārds | 
+      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
+      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
     </p>
   </footer>
 
+  <!-- JS -->
   <script src="js/theme-toggle.js" defer></script>
 </body>
 </html>

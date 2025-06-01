@@ -1,4 +1,4 @@
-/* simple reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,3 +26,10 @@ a:hover {
 .flex { display: flex; }
 .flex-center { justify-content: center; align-items: center; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+/* Heading styles */
+h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}

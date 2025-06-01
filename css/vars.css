@@ -1,33 +1,45 @@
 /* Light theme variables */
+/* Light Theme */
 :root {
-  /* backgrounds */
+  /* Backgrounds */
   --bg-primary: #FFFFFF;
   --bg-secondary: #F7F7F7;
 
-  /* accents (school-specific) */
-  --accent-school: #FFD400;    /* R6vsk */
-  --accent-riseba: #8C0C04;    /* RISEBA */
-  --accent-lu-light: #1F396C;  /* LU light */
-  --accent-lu-dark: #3F5BAE;   /* LU dark */
+  /* Accents */
+  --accent-school: #FFD400;      /* R6vsk accent (yellow) */
+  --accent-riseba: #8C0C04;      /* RISEBA accent (deep red) */
+  --accent-lu-light: #1F396C;    /* LU accent (dark blue) */
 
-  /* text colors */
+  /* Text */
   --text-main: #000000;
   --text-secondary: #67655F;
   --text-link: #04346C;
+
+  /* Fonts */
+  --font-heading: "Arial Black", sans-serif;
+  --font-body: Arial, sans-serif;
+  --font-size-base: 16px;
 }
 
-/* Dark‐mode overrides */
+/* Dark Theme Overrides */
 [data-theme="dark"] {
+  /* Backgrounds */
   --bg-primary: #1A1A1A;
   --bg-secondary: #2C2C2C;
-  --accent-school: #FFD400;
-  --accent-riseba: #8C0C04;
-  --accent-lu-light: #3F5BAE; /* pick LU’s dark accent */
-  --accent-lu-dark: #3F5BAE;
 
+  /* Keep same accents for school & RISEBA */
+  /* For LU, switch to slightly brighter blue */
+  --accent-lu-light: #3F5BAE;
+
+  /* Text */
   --text-main: #FFFFFF;
   --text-secondary: #B0B0B0;
   --text-link: #436791;
+}
+
+/* LU accent (dynamic based on theme) */
+:root {
+  --accent-lu: var(--accent-lu-light);
 }
 
 
@@ -36,12 +48,4 @@
   --font-heading: "Arial Black", sans-serif; /* (or “Treknraksts” if you have it installed) */
   --font-body: Arial, sans-serif;
   --font-size-base: 16px;
-}
-
-
-:root {
-  --accent-lu: var(--accent-lu-light);
-}
-[data-theme="dark"] {
-  --accent-lu: var(--accent-lu-dark);
 }

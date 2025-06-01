@@ -1,58 +1,75 @@
+
+/* Header */
 header {
   background: var(--bg-secondary);
   padding: 1rem 0;
   border-bottom: 1px solid #CCC;
 }
 header .logo {
-  font-family: var(--font-heading);
   font-size: 1.5rem;
   color: var(--accent-school);
 }
+
+/* Navigation */
 nav {
-  margin-top: 0.5rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid #CCC;
 }
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
 }
 nav a {
   font-weight: bold;
   color: var(--text-main);
 }
 
-
-.main-content {
+/* Main Content: Comparison Cards */
+.main-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
   padding: 2rem 0;
 }
 .card {
   background: var(--bg-secondary);
-  border: 2px solid var(--accent-school);
-  border-radius: 4px;
-  padding: 1rem;
+  border: 3px solid var(--accent-school);
+  border-radius: 6px;
+  padding: 1.25rem;
   text-align: center;
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
 }
 .card img {
-  max-width: 60px;
-  margin-bottom: 0.5rem;
+  max-width: 70px;
+  margin-bottom: 0.75rem;
 }
 .card h3 {
-  font-family: var(--font-heading);
   margin-bottom: 0.5rem;
 }
 .card p {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
-.card.lu {
-  border-color: var(--accent-lu);
+/* Card Accent Overrides */
+.card.school { border-color: var(--accent-school); }
+.card.riseba { border-color: var(--accent-riseba); }
+.card.lu     { border-color: var(--accent-lu); }
+
+/* Summary Section */
+.summary {
+  padding: 1.5rem 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
 }
 
-
+/* Footer */
 footer {
   background: var(--bg-secondary);
   padding: 1rem 0;
@@ -61,3 +78,13 @@ footer {
   font-size: 0.9rem;
 }
 footer a { margin: 0 0.5rem; }
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-main);
+  padding: 0.25rem;
+}
