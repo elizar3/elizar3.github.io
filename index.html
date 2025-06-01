@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="lv">
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salīdzinājums – Sākums</title>
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/themes.css" />
 </head>
 <body>
-    
+  <header class="container flex flex-center" style="justify-content: space-between;">
+    <div class="logo">[Logo vai Projekta nosaukums]</div>
+    <div>
+      <button id="theme-toggle">🌓</button>
+    </div>
+  </header>
+
+  <nav class="container">
+    <ul>
+      <li><a href="index.html">Sākums</a></li>
+      <li><a href="comparison.html">Salīdzinājums</a></li>
+      <li><a href="details.html">Detalizēti</a></li>
+      <li><a href="about.html">Par mani</a></li>
+      <li><a href="#">Kontakti</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section class="main-content">
+      <!-- R6vsk card -->
+      <div class="card" style="border-color: var(--accent-school);">
+        <img src="icons/r6vsk.svg" alt="R6vsk ikona">
+        <h3>R6vsk</h3>
+        <p>Īss digitālo rīku un platformas apraksts.</p>
+      </div>
+      <!-- RISEBA card -->
+      <div class="card" style="border-color: var(--accent-riseba);">
+        <img src="icons/riseba.svg" alt="RISEBA ikona">
+        <h3>RISEBA</h3>
+        <p>Īss digitālo rīku un platformas apraksts.</p>
+      </div>
+      <!-- LU card (use light or dark accent based on current theme) -->
+      <div class="card lu" style="border-color: var(--accent-lu-light);">
+        <img src="icons/lu.svg" alt="LU ikona">
+        <h3>LU</h3>
+        <p>Īss digitālo rīku un platformas apraksts.</p>
+      </div>
+    </section>
+
+    <section class="container text-center">
+      <p>Salīdzinājuma kopsavilkums šeit…</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>© 2025 Vārds Uzvārds | 
+      <a href="https://twitter.com/yourprofile">Twitter</a> | 
+      <a href="mailto:you@uni.lv">you@uni.lv</a>
+    </p>
+  </footer>
+
+  <script src="js/theme-toggle.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+/* You could optionally style the toggle button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-main);
+}

@@ -1,0 +1,47 @@
+/* Light theme variables */
+:root {
+  /* backgrounds */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F7F7F7;
+
+  /* accents (school-specific) */
+  --accent-school: #FFD400;    /* R6vsk */
+  --accent-riseba: #8C0C04;    /* RISEBA */
+  --accent-lu-light: #1F396C;  /* LU light */
+  --accent-lu-dark: #3F5BAE;   /* LU dark */
+
+  /* text colors */
+  --text-main: #000000;
+  --text-secondary: #67655F;
+  --text-link: #04346C;
+}
+
+/* Dark‐mode overrides */
+[data-theme="dark"] {
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #2C2C2C;
+  --accent-school: #FFD400;
+  --accent-riseba: #8C0C04;
+  --accent-lu-light: #3F5BAE; /* pick LU’s dark accent */
+  --accent-lu-dark: #3F5BAE;
+
+  --text-main: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --text-link: #436791;
+}
+
+
+/* Typography */
+:root {
+  --font-heading: "Arial Black", sans-serif; /* (or “Treknraksts” if you have it installed) */
+  --font-body: Arial, sans-serif;
+  --font-size-base: 16px;
+}
+
+
+:root {
+  --accent-lu: var(--accent-lu-light);
+}
+[data-theme="dark"] {
+  --accent-lu: var(--accent-lu-dark);
+}
