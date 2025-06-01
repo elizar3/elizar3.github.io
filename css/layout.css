@@ -74,7 +74,7 @@ header.app-bar .logo-sep {
 
 /* DARK MODE LINK COLORS */
 [data-theme="dark"] .nav-list li a {
-  color: var(--text-secondary);
+  color: #ffffff;
 }
 [data-theme="dark"] .nav-list li a:hover,
 [data-theme="dark"] .nav-list li a:focus {
