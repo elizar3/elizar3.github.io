@@ -13,7 +13,7 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview23"
-     pagecolor="#000000"
+     pagecolor="#888888"
      bordercolor="#ffffff"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
@@ -42,7 +42,7 @@
       }
 
       .cls-2, .cls-3 {
-        fill: #000;
+        fill: #888;
       }
     </style>
   </defs>
