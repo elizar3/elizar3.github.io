@@ -26,6 +26,7 @@ a:hover {
 .flex { display: flex; }
 .flex-center { justify-content: center; align-items: center; }
 .items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
 .pill {
   padding: 0.4rem 1rem;
   border-radius: 999px;
@@ -33,7 +34,7 @@ a:hover {
 }
 
 /* Hide bullet points in lists by default */
-ul { list-style: none; }
+ul { margin: 0; padding: 0; list-style: none; }
 .gap-1 { gap: 1rem; }
 .gap-2 { gap: 2rem; }
 .container { width: 90%; max-width: 1200px; margin: 0 auto; }

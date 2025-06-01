@@ -13,26 +13,30 @@
 
 <body>
   <!-- Merged App Bar -->
-  <header class="app-bar container flex">
-    <!-- Logo / Title -->
-    <div class="logo">
-      Skola <span class="logo‐sep">‒</span> Uni Salīdzinājums
-    </div>
+  <header class="app-bar">
+    <div class="container flex items-center justify-between">
+      <!-- Logo -->
+      <div class="logo">
+        Skola <span class="logo-sep">-</span> Uni Salīdzinājums
+      </div>
 
-    <!-- Nav Links + Theme Toggle -->
-    <div class="right‐controls flex">
-      <nav>
-        <ul class="nav‐list flex">
-          <li><a href="index.html">Sākums</a></li>
-          <li><a href="comparison.html">Salīdzinājums</a></li>
-          <li><a href="details.html">Detalizēti</a></li>
-          <li><a href="about.html">Par mani</a></li>
-          <li><a href="#contacts">Kontakti</a></li>
-        </ul>
-      </nav>
+      <!-- Nav + Toggle -->
+      <div class="right-controls flex items-center gap-1">
+        <nav>
+          <ul class="nav-list flex">
+            <li><a href="index.html" class="active">Sākums</a></li>
+            <li><a href="comparison.html">Salīdzinājums</a></li>
+            <li><a href="details.html">Detalizēti</a></li>
+            <li><a href="about.html">Par mani</a></li>
+            <li><a href="#contacts">Kontakti</a></li>
+          </ul>
+        </nav>
 
-      <!-- Theme Toggle Button -->
-      <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">🌓</button>
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+          🌓
+        </button>
+      </div>
     </div>
   </header>
 

@@ -1,73 +1,85 @@
 /* ─────────── HEADER / NAV BAR ─────────── */
 
+/* APP BAR BACKGROUND & SHADOW */
 header.app-bar {
-  background: linear-gradient(
-    90deg,
-    var(--accent-school) 0%,
-    var(--accent-lu) 100%
-  );
-  padding: 1rem 0;
-  border-bottom: 4px solid var(--accent-riseba);
-
-  border-radius: 0 0 12px 12px;
-
-  box-shadow: 0 4px 12px rgba(31, 57, 108, 0.08);
-  color: #fff;
+  /* background: var(--bg-secondary); */
+  background: linear-gradient(90deg, var(--accent-school) 0%, var(--accent-lu) 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0;
 }
 
-header.app-bar.container {
+/* CONTAINER INSIDE APP BAR */
+header.app-bar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo text */
+/* LOGO */
 header.app-bar .logo {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--accent-school);
 }
 
-header.app-bar .logo‐sep {
+[data-theme="dark"] header.app-bar .logo {
   color: var(--accent-riseba);
 }
 
-header.app-bar .right‐controls {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
+/* SMALL DASH BETWEEN LOGO WORDS */
+header.app-bar .logo-sep {
+  color: var(--accent-lu);
 }
 
-/* NAV LINKS */
+/* NAVIGATION LIST */
 .nav-list {
   display: flex;
-  gap: 1rem;
-
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-list li a {
-  @apply .pill;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  color: #fff;
-  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
   font-weight: 500;
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  position: relative;
   transition: background 0.3s, color 0.3s;
 }
 
-.nav-list li a:hover,
-.nav-list li a:focus {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+/* ACTIVE LINK INDICATOR: bottom border */
+.nav-list li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -0.2rem;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-lu);
+  border-radius: 2px 2px 0 0;
 }
 
-/* ACTIVE LINK STATE (optional): add a bottom‐border if you set a “.active” class */
-.nav-list li a.active {
-  border-bottom: 2px solid #fff;
+/* HOVER / FOCUS STATE */
+.nav-list li a:hover,
+.nav-list li a:focus {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+
+/* DARK MODE LINK COLORS */
+[data-theme="dark"] .nav-list li a {
+  color: var(--text-secondary);
+}
+[data-theme="dark"] .nav-list li a:hover,
+[data-theme="dark"] .nav-list li a:focus {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
 /* ─────────── Hero Section ─────────── */
@@ -188,20 +200,34 @@ footer a:hover {
 /* ─────────── Theme Toggle Button ─────────── */
 
 #theme-toggle {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.10);
   border: none;
-  border-radius: 999px;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.25rem;
-  color: #fff;
-  padding: 0.4rem 0.75rem;
+  color: var(--text-main);
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
 
 #theme-toggle:hover,
 #theme-toggle:focus {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.20);
   transform: translateY(-1px);
+}
+
+[data-theme="dark"] #theme-toggle {
+  background: rgba(0, 0, 0, 0.20);
+  color: var(--text-secondary);
+}
+[data-theme="dark"] #theme-toggle:hover,
+[data-theme="dark"] #theme-toggle:focus {
+  background: rgba(255, 255, 255, 0.10);
+  color: #fff;
 }
 
 /* ─────────── Miscellaneous ─────────── */
