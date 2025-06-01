@@ -1,3 +1,5 @@
+/* ─────────── Header & Navigation ─────────── */
+
 /* Header */
 header {
   background: var(--bg-secondary);
@@ -9,68 +11,41 @@ header .logo {
   color: var(--accent-school);
 }
 
-/* Navigation */
-nav {
+/* Sticky Navigation */
+nav.container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--bg-secondary);
   border-top: 1px solid #CCC;
+  box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
 }
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
   padding: 0.75rem 0;
+  margin: 0;
 }
 nav a {
   font-weight: bold;
   color: var(--text-main);
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: var(--accent-lu);
 }
 
-/* Main Content: Comparison Cards */
-.main-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
-}
-.card {
-  background: var(--bg-secondary);
-  border: 3px solid var(--accent-school);
-  border-radius: 14px;
-  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
-  text-align: center;
-  transition: 
-    transform 0.2s cubic-bezier(.4,2,.6,1),
-    box-shadow 0.2s cubic-bezier(.4,2,.6,1),
-    border-color 0.2s;
-  box-shadow: 0 2px 16px rgba(31, 57, 108, 0.07);
-}
-.card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 32px rgba(31, 57, 108, 0.13);
-  border-color: var(--accent-lu);
-}
-.card img {
-  max-width: 70px;
-  margin-bottom: 0.75rem;
-}
-.card h3 {
-  margin-bottom: 0.5rem;
-}
-.card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
+/* ─────────── Hero Section ─────────── */
 
-/* Card Accent Overrides */
-.card.school { border-color: var(--accent-school); }
-.card.riseba { border-color: var(--accent-riseba); }
-.card.lu     { border-color: var(--accent-lu); }
-
-/* Hero Section */
 .hero {
-  background: linear-gradient(90deg, var(--accent-school) 0%, var(--accent-lu) 100%);
-  color: #fff;
+  background: linear-gradient(
+    90deg,
+    var(--accent-school) 0%,
+    var(--accent-lu) 100%
+  );
+  color: #ffffff;
   border-radius: 12px;
   padding: 2.5rem 2rem 2rem 2rem;
   margin: 2rem 0 2.5rem 0;
@@ -80,65 +55,119 @@ nav a {
 .hero h1 {
   font-family: var(--font-heading);
   font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 .hero p {
   font-size: 1.15rem;
   color: #f8f8f8;
-  margin-bottom: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.5;
 }
 
-/* Summary Section */
+/* ─────────── Summary Section ─────────── */
+
 .summary {
-  background: linear-gradient(90deg, var(--bg-secondary) 80%, var(--accent-school) 100%);
+  background: var(--bg-secondary);
   border-radius: 10px;
-  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  padding: 1.5rem 2rem;
   margin: 1.5rem 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
 }
-
-/* Container Improvements */
-.container {
-  width: 92%;
-  max-width: 1200px;
+.summary p {
+  max-width: 900px;
   margin: 0 auto;
-  border-radius: 14px;
+  line-height: 1.6;
 }
 
-/* Sticky Navigation */
-nav.container {
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* ─────────── Main Cards ─────────── */
+
+.main-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+.card {
   background: var(--bg-secondary);
-  box-shadow: 0 2px 8px rgba(31, 57, 108, 0.04);
-  border-radius: 0 0 12px 12px;
+  border: 3px solid var(--accent-school);
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  text-align: center;
+  transition: 
+    transform 0.25s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.25s cubic-bezier(.4,0,.2,1),
+    border-color 0.25s;
+  box-shadow: 0 2px 16px rgba(31, 57, 108, 0.07);
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(31, 57, 108, 0.13);
+  border-color: var(--accent-lu);
+}
+.card img {
+  max-width: 60px;
+  margin-bottom: 0.75rem;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--text-main);
+}
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 250px;
 }
 
-/* Footer */
+/* Card Accent Overrides */
+.card.school { border-color: var(--accent-school); }
+.card.riseba { border-color: var(--accent-riseba); }
+.card.lu     { border-color: var(--accent-lu); }
+
+/* ─────────── Footer ─────────── */
+
 footer {
   background: var(--bg-secondary);
   padding: 1rem 0;
   border-top: 1px solid #CCC;
   text-align: center;
   font-size: 0.9rem;
+  margin-top: 2.5rem;
 }
-footer a { margin: 0 0.5rem; }
+footer a {
+  margin: 0 0.5rem;
+  color: var(--text-link);
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: var(--accent-riseba);
+}
 
-/* Theme Toggle Button */
+/* ─────────── Theme Toggle Button ─────────── */
+
 #theme-toggle {
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   cursor: pointer;
   color: var(--text-main);
   padding: 0.25rem;
+  transition: color 0.3s;
+}
+#theme-toggle:hover {
+  color: var(--accent-lu);
 }
 
-/* Theme Transition */
-body, .card, .summary, .container, nav, header, footer {
+/* ─────────── Miscellaneous ─────────── */
+
+/* Smooth theme transitions */
+body, .card, .summary, nav, header, footer, .hero {
   transition: background 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
 }
