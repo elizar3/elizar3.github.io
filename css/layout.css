@@ -3,7 +3,7 @@
 /* Header */
 header {
   background: var(--bg-secondary);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid #CCC;
 }
 header .logo {
@@ -25,7 +25,8 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 0.75rem 0;
+
+  padding: 1rem 0;
   margin: 0;
 }
 nav a {
@@ -84,11 +85,11 @@ nav a:hover {
   line-height: 1.6;
 }
 
-/* ─────────── Main Cards ─────────── */
+/* ─────────── Main Content: Comparison Cards ─────────── */
 
 .main-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   padding: 2rem 0;
 }
@@ -123,7 +124,7 @@ nav a:hover {
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0 auto;
-  max-width: 250px;
+  max-width: none;
 }
 
 /* Card Accent Overrides */
