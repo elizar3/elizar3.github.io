@@ -1,10 +1,67 @@
-<main class="container">
-  <h2 style="font-family:var(--font-heading);">Par mani un projekta fona stāstu</h2>
-  <p>Īss teksts par tevi, kursa prasībām utt.</p>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Par mani - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
 
-  <h3 style="font-family:var(--font-heading); margin-top:2rem;">Sociālo mediju saites</h3>
-  <ul>
-    <li><a href="https://linkedin.com/in/you">LinkedIn</a></li>
-    <li><a href="https://github.com/you">GitHub</a></li>
-  </ul>
-</main>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
+
+<body>
+  <!-- Merged App Bar -->
+  <header class="app-bar">
+    <div class="container flex items-center justify-between">
+      <!-- Logo -->
+      <div class="logo">
+        Skola <span class="logo-sep">-</span> Uni Salīdzinājums
+      </div>
+
+      <!-- Nav + Toggle -->
+      <div class="right-controls flex items-center gap-1">
+        <nav>
+          <ul class="nav-list flex">
+            <li><a href="index.html">Sākums</a></li>
+            <li><a href="comparison.html">Salīdzinājums</a></li>
+            <li><a href="details.html">Detalizēti</a></li>
+            <li><a href="about.html" class="active">Par mani</a></li>
+            <li><a href="#contacts">Kontakti</a></li>
+          </ul>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+          🌓
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="font-family:var(--font-heading);">Par mani un projekta fona stāstu</h2>
+    <p>Īss teksts par tevi, kursa prasībām utt.</p>
+
+    <h3 style="font-family:var(--font-heading); margin-top:2rem;">Sociālo mediju saites</h3>
+    <ul>
+      <li><a href="https://linkedin.com/in/you">LinkedIn</a></li>
+      <li><a href="https://github.com/you">GitHub</a></li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container" id="contacts">
+    <p>
+      © 2025 Vārds Uzvārds | 
+      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
+      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/theme-toggle.js" defer></script>
+</body>
+</html>

@@ -21,10 +21,6 @@ header.app-bar .logo {
   font-family: var(--font-heading);
   font-size: 1.6rem;
   letter-spacing: 0.5px;
-  color: var(--accent-school);
-}
-
-[data-theme="dark"] header.app-bar .logo {
   color: var(--accent-riseba);
 }
 
@@ -177,6 +173,157 @@ header.app-bar .logo-sep {
 .card.school { border-color: var(--accent-school); }
 .card.riseba { border-color: var(--accent-riseba); }
 .card.lu     { border-color: var(--accent-lu); }
+
+/* ─────────── Comparison view ─────────── */
+/* Comparison Table */
+table.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-main);
+}
+
+/* Header row */
+table.compare-table thead th {
+  background: var(--accent-school);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* “Property name” column */
+table.compare-table tbody .prop-name {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  width: 25%;
+}
+
+/* Value cells (left and right) */
+table.compare-table tbody .prop-val {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(31,57,108,0.1);
+  vertical-align: top;
+  word-break: break-word;
+}
+
+/* Same = greenish background, different = light red background */
+table.compare-table tbody .same-cell {
+  background: rgba(76, 175, 80, 0.1);   /* very light green */
+}
+table.compare-table tbody .diff-cell {
+  background: rgba(244, 67, 54, 0.1);   /* very light red */
+}
+
+/* In dark mode, lighten the backgrounds differently */
+[data-theme="dark"] table.compare-table thead th {
+  background: var(--accent-lu); /* make header a blue in dark mode */
+}
+[data-theme="dark"] table.compare-table tbody .prop-name {
+  background: #333; 
+  color: var(--text-secondary);
+}
+[data-theme="dark"] table.compare-table tbody .same-cell {
+  background: rgba(76, 175, 80, 0.2);  /* slightly stronger on dark */
+}
+[data-theme="dark"] table.compare-table tbody .diff-cell {
+  background: rgba(244, 67, 54, 0.2);
+}
+
+/* ─────────── Compare‐Selector Flex Container ─────────── */
+.compare-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* aligns items at start; adjust if you want center */
+  gap: 1rem;                   /* space between label, vs, label */
+}
+
+/* Label next to each select */
+.compare-label {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* The “vs” text */
+.compare-vs {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem; /* a tiny vertical align adjustment if needed */
+}
+
+/* ─────────── Styled Selects ─────────── */
+.styled-select {
+  appearance: none;            /* remove default arrow in most browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+
+  /* set a fixed or max width so it doesn’t collapse too small */
+  width: 180px;
+  max-width: 100%;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Add a custom arrow (simple CSS triangle) */
+.styled-select {
+  background-image: 
+    linear-gradient(45deg, transparent 50%, var(--text-secondary) 50%),
+    linear-gradient(135deg, var(--text-secondary) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1rem) 50%,
+    calc(100% - 0.65rem) 50%;
+  background-size: 0.45rem 0.45rem, 0.45rem 0.45rem;
+  background-repeat: no-repeat;
+}
+
+/* Hover / Focus states */
+.styled-select:hover,
+.styled-select:focus {
+  border-color: var(--accent-lu);
+  background-color: var(--bg-primary);
+  outline: none;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .styled-select {
+  background-color: #2c2c2c;
+  color: var(--text-main);
+  border: 1px solid var(--text-secondary);
+}
+[data-theme="dark"] .styled-select:hover,
+[data-theme="dark"] .styled-select:focus {
+  border-color: var(--accent-riseba);
+  background-color: #3a3a3a;
+}
+
+/* If you want the labels to shrink on mobile: */
+@media (max-width: 600px) {
+  .compare-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .styled-select {
+    width: 100%;
+  }
+}
+
 
 /* ─────────── Footer ─────────── */
 

@@ -1,15 +1,189 @@
-<main class="container">
-  <section id="spring2020">
-    <h3 style="font-family:var(--font-heading);">Skolas – Pavasaris 2020</h3>
-    <p>Ļoti detalizēts apraksts, ekrānuzņēmumi utt.</p>
-    <img src="images/school-spring2020.png" alt="Skolas platforma 2020 screenshot">
-  </section>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalizēti - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
 
-  <section id="fall2021" style="margin-top:2rem;">
-    <h3 style="font-family:var(--font-heading);">Pirmā universitāte – Rudens 2021</h3>
-    <p>Apraksts, ekrānuzņēmumi utt.</p>
-    <img src="images/uni1-fall2021.png" alt="Uni1 platforma 2021 screenshot">
-  </section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
 
-  <!-- utt. -->
-</main>
+<body>
+  <!-- Merged App Bar -->
+  <header class="app-bar">
+    <div class="container flex items-center justify-between">
+      <!-- Logo -->
+      <div class="logo">
+        Skola <span class="logo-sep">-</span> Uni Salīdzinājums
+      </div>
+
+      <!-- Nav + Toggle -->
+      <div class="right-controls flex items-center gap-1">
+        <nav>
+          <ul class="nav-list flex">
+            <li><a href="index.html">Sākums</a></li>
+            <li><a href="comparison.html">Salīdzinājums</a></li>
+            <li><a href="details.html" class="active">Detalizēti</a></li>
+            <li><a href="about.html">Par mani</a></li>
+            <li><a href="#contacts">Kontakti</a></li>
+          </ul>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+          🌓
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Skolas – Pavasaris 2020 -->
+    <section id="spring2020" class="summary">
+      <h3 style="font-family:var(--font-heading);">Skola - Pavasaris 2020</h3>
+      <p>
+        2020. gada marta beigās Latvijā, tāpat kā daudzviet pasaulē, tika ieviesti plaši ierobežojumi klātienes mācībām, jo to pieprasīja Covid-19 pandēmijas izraisītā situācija. Rīgas 6. vidusskola (R6vsk) ātri pārgāja uz attālināto mācību režīmu, galvenokārt izmantojot <strong>EduPage</strong> mācību platformu, kas jau tika lietots stundu sarakstu un paziņojumu pārvaldībai, taču pandēmijas laikā kļuva par galveno vidi gan materiālu publicēšanai, gan tiešsaistes nodarbību organizēšanai.
+      </p>
+
+      <h4>1. EduPage lietošanas īpatnības</h4>
+      <ul>
+        <li>
+          <strong>Tiešsaistes stundas (Online Lessons):</strong> skolotāji izmantoja EduPage “Online Lessons” moduli, lai prezentācijas, lekcijas un interaktīvās aktivitātes būtu pieejamas pārlūkprogrammā bez papildu programmatūras.
+        </li>
+        <li>
+          <strong>Mājasdarbu un testu vadība:</strong> mājasdarbi un testi tika augšupielādēti EduPage vidē, kur skolēni varēja tiešsaistē iesniegt darbus un pildīt testus; skolotāji vērtēja tieši sistēmā.
+        </li>
+        <li>
+          <strong>Datu drošība un šifrēšana:</strong> visi skolas dati (klasu saraksti, paziņojumi, skolēnu vērtējumi) tika šifrēti un dublēti uz diviem fiziskiem serveriem, nodrošinot izturību pret datu zudumiem un pastāvīgu pieejamību.
+        </li>
+        <li>
+          <strong>Komunikācija ar vecākiem un skolēniem:</strong> EduPage mobilā lietotne ļāva vecākiem saņemt paziņojumus par stundu izmaiņām, tiešsaistes lekcijām un aktuālajiem uzdevumiem.
+        </li>
+      </ul>
+
+      <h4>2. Praktiskais process</h4>
+      <ol>
+        <li>
+          <strong>Pieteikšanās un identifikācija:</strong> skolēni un skolotāji izmantoja skolas piešķirtos EduPage kontus; bija pieejama parole atjaunošanas funkcija.
+        </li>
+        <li>
+          <strong>Stundu grafika pielāgošana:</strong> laiki tika mainīti attālinātajam režīmam (piemēram, 1. stunda sākās no 8:00), un tiešsaistes stundu saites tika ievietotas stundu sarakstos.
+        </li>
+        <li>
+          <strong>Skolas atbalsts:</strong> tikšanās (tiešsaistē) ar IT dienestu, promtotot īsas pamācības par EduPage lietošanu, lai palielinātu digitālo pratību.
+        </li>
+      </ol>
+
+      <!-- Attēla vietturis -->
+      <!-- <img src="images/school-spring2020.png" alt="R6vsk EduPage pavasara 2020 ekrānuzņēmums"> -->
+    </section>
+
+    <!-- Pirmā universitāte – Rudens 2021 -->
+    <section id="fall2021" class="summary" style="margin-top:2rem;">
+      <h3 style="font-family:var(--font-heading);">Pirmā universitāte – Rudens 2021 (RISEBA)</h3>
+      <p>
+        2021. gada rudens semestrī RISEBA pilnveidoja savu <strong>e.RISEBA</strong> Moodle vidi, ņemot vērā hibrīdās studiju prasības. e.RISEBA kļuva par galveno vidi kursu materiālu publicēšanai, forumu vadībai un video lekcijām, ko pasniedzēji nodrošināja gan <strong>Zoom</strong>, gan <strong>MS Teams</strong> ietvaros.
+      </p>
+
+      <h4>1. e.RISEBA galvenās funkcionalitātes un atjauninājumi</h4>
+      <ul>
+        <li>
+          <strong>Moodle bāzes uzlabojumi:</strong> kursu izkārtojumi ar jaunu UI, kur pasniedzēji varēja pievienot kursa attēlus un veidot skaidrāku struktūru, kā arī Moodle forumi tiešsaistes diskusijām.
+        </li>
+        <li>
+          <strong>Digitekа un Motival integrācija:</strong> Digitekа platforma sniedza iespēju studentiem novērtēt savas digitālās prasmes un saņemt pielāgotus kursu ieteikumus, balstoties uz Motival testiem.
+        </li>
+        <li>
+          <strong>E-resursi un bibliotēka:</strong> RISEBA Bibliotēkas portālā bija pieejamas e-grāmatas, zinātniskie raksti un datubāzes tieši no e.RISEBA.
+        </li>
+        <li>
+          <strong>Tiešsaistes lekciju formāts:</strong> vairums lekciju tika pārraidītas, izmantojot Zoom vai MS Teams, bet video ieraksti un prezentācijas tika glabātas Moodle.
+        </li>
+      </ul>
+
+      <h4>2. Mācību procesa organizācija</h4>
+      <ol>
+        <li>
+          <strong>Pieteikšanās e.RISEBA:</strong> studenti izmantoja sava universitātes e-pasta datus SSO risinājuma ietvaros.
+        </li>
+        <li>
+          <strong>Hibrīdā lekcija:</strong>
+          <ul>
+            <li><em>Sinhronā komunikācija:</em> Zoom/Teams sesijas, kas sinhronizētas ar Moodle kursa noformējumu.</li>
+            <li><em>Asinhronā piekļuve:</em> videoklipu ieraksti glabājās Moodle “Video resources” sadaļā.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>E-mācību aktivitāšu žurnāla analīze:</strong> kursu koordinatori pārskatīja studentu iesaisti (testu izpildi, video skatīšanās laiku) vismaz reizi nedēļā.
+        </li>
+      </ol>
+
+      <!-- Attēla vietturis -->
+      <!-- <img src="images/uni1-fall2021.png" alt="RISEBA e.RISEBA rudens 2021 ekrānuzņēmums"> -->
+    </section>
+
+    <!-- LU – Pavasaris 2022 -->
+    <section id="spring2022" class="summary" style="margin-top:2rem;">
+      <h3 style="font-family:var(--font-heading);">LU – Pavasaris 2022 (E-studijas)</h3>
+      <p>
+        2022. gada pavasarī Latvijas Universitāte (LU) turpināja attīstīt savu <strong>E-studijas</strong> platformu, balstītu uz Moodle. Galvenais uzsvars bija uz <strong>BigBlueButton (BBB)</strong> video konferenču integrāciju, kursu vizuālā noformējuma uzlabojumiem un <strong>MS Teams</strong>/<strong>OneDrive</strong> savienojumu.
+      </p>
+
+      <h4>1. Galvenie E-studiju uzlabojumi</h4>
+      <ul>
+        <li>
+          <strong>BigBlueButton integrācija:</strong> pasniedzēji varēja iestatīt BBB sesijas tieši Moodle kursā, nodrošinot streaming un ierakstu iespējas.
+        </li>
+        <li>
+          <strong>Kursa vizuālā dizaina pilnveide:</strong> kursu veidotāji pievienoja kursa galvenes attēlus un pielāgoja kursu sadaļu krāsu shēmas, izmantojot drag-and-drop.
+        </li>
+        <li>
+          <strong>MS Teams un OneDrive integrācija:</strong> Office365 konti nodrošināja automātisku piekļuvi OneDrive dokumentiem, kur pasniedzēji varēja glabāt papildu video un failus.
+        </li>
+        <li>
+          <strong>Mākonī glabātas lekcijas:</strong> visi BBB ieraksti tika automātiski augšupielādēti Moodle “Video lectures” kategorijā; 2022. gadā LU nodrošināja lielāku OneDrive vietu, lai pasniedzēji varētu augšupielādēt papildu materiālus.
+        </li>
+        <li>
+          <strong>FORTHEM Digital Academy dalība:</strong> LU ieviesa virtuālās mobilitātes un MOOC kursu sadaļu Moodle, ļaujot studentiem reģistrēties starpuniversitāšu projektiem.
+        </li>
+      </ul>
+
+      <h4>2. Praktiskie aspekti un atbalsts</h4>
+      <ol>
+        <li>
+          <strong>Pieteikšanās E-studijām:</strong> studenti izmantoja savu LU Office365 kontu, lai autorizētos Moodle vidē; paroles atjaunošana notika caur Office365.
+        </li>
+        <li>
+          <strong>Tiešsaistes un asinhronās aktivitātes:</strong>
+          <ul>
+            <li><em>Tiešsaistes sesijas (BBB):</em> kursu mācībās tika organizētas vismaz divas BBB sesijas nedēļā, ar automātisku ierakstu pieejamību 24 stundas pēc nodarbības.</li>
+            <li><em>Asinhronais atbalsts:</em> Moodle forumos un Q&A sadaļās studenti varēja uzdot jautājumus, un pasniedzēji regulāri sniedza atbildes.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Studentu digitālo prasmju uzlabošana:</strong> fakultāte rīkoja seminārus par datu pārvaldību Moodle, autortiesību jautājumiem un informācijas kvalitātes novērtēšanu tiešsaistes avotos.
+        </li>
+      </ol>
+
+      <!-- Attēla vietturis -->
+      <!-- <img src="images/lu-spring2022.png" alt="LU E-studijas pavasara 2022 ekrānuzņēmums"> -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container" id="contacts">
+    <p>
+      © 2025 Vārds Uzvārds | 
+      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
+      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/theme-toggle.js" defer></script>
+</body>
+</html>

@@ -1,38 +1,293 @@
-<main class="container">
-  <!-- Section tabs -->
-  <ul class="flex" style="gap: 2rem; list-style:none; margin-top:1rem;">
-    <li><a href="#school">Skolas pieredze</a></li>
-    <li><a href="#first-uni">Pirmā universitāte</a></li>
-    <li><a href="#lu">LU pieredze</a></li>
-  </ul>
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salīdzinājums - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
 
-  <!-- School section -->
-  <section id="school" style="margin-top:2rem;">
-    <h2 style="font-family:var(--font-heading);">Skolas pieredze</h2>
-    <p>Pārskats par digitālajiem rīkiem un platformām…</p>
-    <ul>
-      <li>Galvenās iezīmes: …</li>
-      <li><a href="details.html#spring2020">Detalizētāk par pavasari 2020</a></li>
-    </ul>
-  </section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/vars.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
 
-  <!-- First University -->
-  <section id="first-uni" style="margin-top:2rem;">
-    <h2 style="font-family:var(--font-heading);">Pirmās universitātes pieredze</h2>
-    <p>Pārskats par digitālajiem rīkiem un platformām…</p>
-    <ul>
-      <li>Galvenās iezīmes: …</li>
-      <li><a href="details.html#fall2021">Detalizētāk par rudeni 2021</a></li>
-    </ul>
-  </section>
+<body>
+  <!-- Merged App Bar -->
+  <header class="app-bar">
+    <div class="container flex items-center justify-between">
+      <!-- Logo -->
+      <div class="logo">
+        Skola <span class="logo-sep">-</span> Uni Salīdzinājums
+      </div>
 
-  <!-- LU -->
-  <section id="lu" style="margin-top:2rem;">
-    <h2 style="font-family:var(--font-heading);">LU pieredze</h2>
-    <p>Pārskats par digitālajiem rīkiem un platformām…</p>
-    <ul>
-      <li>Galvenās iezīmes: …</li>
-      <li><a href="details.html#spring2022">Detalizētāk par pavasari 2022</a></li>
-    </ul>
-  </section>
-</main>
+      <!-- Nav + Toggle -->
+      <div class="right-controls flex items-center gap-1">
+        <nav>
+          <ul class="nav-list flex">
+            <li><a href="index.html">Sākums</a></li>
+            <li><a href="comparison.html" class="active">Salīdzinājums</a></li>
+            <li><a href="details.html">Detalizēti</a></li>
+            <li><a href="about.html">Par mani</a></li>
+            <li><a href="#contacts">Kontakti</a></li>
+          </ul>
+        </nav>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+          🌓
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Two dropdowns for selecting profiles -->
+    <section class="summary compare-selector" style="margin-top:2rem; margin-bottom:1rem;">
+      <div class="compare-flex">
+        <label class="compare-label">
+          Salīdzināt:
+          <select id="selectA" class="styled-select">
+            <option value="r6vsk">R6vsk</option>
+            <option value="riseba">RISEBA</option>
+            <option value="lu">LU</option>
+          </select>
+        </label>
+        <span class="compare-vs">pret</span>
+        <label class="compare-label">
+          <select id="selectB" class="styled-select">
+            <option value="riseba">RISEBA</option>
+            <option value="lu">LU</option>
+            <option value="r6vsk">R6vsk</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <!-- Placeholder where the comparison table will be injected -->
+    <section id="comparisonTable" class="summary" style="margin-top:1rem;"></section>
+
+    <!-- Section tabs -->
+    <section class="summary">
+      <ul class="flex" style="gap: 2rem; list-style:none; margin-top:1rem;">
+        <li><a href="#school">Rīgas 6. vidusskola</a></li>
+        <li><a href="#first-uni">RISEBA</a></li>
+        <li><a href="#lu">Latvijas Universitāte</a></li>
+      </ul>
+    </section>
+
+    <!-- School section -->
+    <section id="school" class="summary" style="margin-top:2rem;">
+      <h2 style="font-family:var(--font-heading);">Rīgas 6. vidusskola (R6vsk)</h2>
+      <p>
+        Rīgas 6. vidusskola izmanto EduPage platformu visām digitālajām vajadzībām — stundu sarakstiem,
+        paziņojumiem un tiešsaistes mācību materiāliem. EduPage dati tiek šifrēti un dublēti uz diviem
+        fiziskiem serveriem, lai nodrošinātu augstāko drošības līmeni. Skolotāji var izveidot tiešsaistes
+        stundas (online lessons), kuras pieejamas pārlūkprogrammā bez papildu programmatūras. Interfeiss
+        pieejams latviešu valodā, un EduPage mobilo lietotni izmanto, lai izziņotu izmaiņas stundu sarakstos
+        un paziņojumus studentiem un vecākiem.
+      </p>
+      <ul>
+        <li>
+          <strong>Galvenās iezīmes:</strong>  
+          <ul>
+            <li>Šifrēti dati un automātiska dublēšana uz 2 serveriem</li>
+            <li>Online lessons — mācību materiālu publicēšana un piekļuve vecākiem</li>
+            <li>Stundu saraksta un aizvietošanas pārvaldība, integrēta ar klases žurnālu</li>
+            <li>Vecākiem iespēja redzēt ēdināšanas plānu un skolēnu progresu</li>
+          </ul>
+        </li>
+        <li><a href="details.html#spring2020">Detalizētāk par pavasari 2020</a></li>
+      </ul>
+    </section>
+
+    <!-- First University -->
+    <section id="first-uni" class="summary" style="margin-top:2rem;">
+      <h2 style="font-family:var(--font-heading);">RISEBA (e.RISEBA)</h2>
+      <p>
+        RISEBA kopš 2006. gada izmanto Moodle bāzētu e-mācību sistēmu e.RISEBA, kur fakultātes locekļi
+        publicē studiju materiālus, rīko forumus un nodrošina interaktīvu komunikāciju ar studentiem.
+        Papildus Moodle, RISEBA izstrādājusi Digiteka — personalizētu digitālo prasmju atpazīšanas
+        platformu ar Motival tehnoloģiju, kas identificē studentu digitālās prasmes un piedāvā 
+        pielāgotus kursus. RISEBA Bibliotēkas portālā ir plašas e-resursu datu bāzes akadēmiskām,
+        biznesa un medicīnas publikācijām.
+      </p>
+      <ul>
+        <li>
+          <strong>Galvenās iezīmes:</strong>  
+          <ul>
+            <li>Moodle platforma ar kursu moduļiem, forumiem un elektroniskajiem testiem</li>
+            <li>Digiteka — prasmju novērtēšana un personalizētie kursi, izmantojot Motival</li>
+            <li>Daļēji mākonī glabātas tiešsaistes lekcijas un ierakstīti webināri</li>
+            <li>Studiju programmas latviešu un angļu valodā, pieejamas e-vidē</li>
+            <li>Bibliotēkas e-resursi (akadēmiskās, biznesa, medicīnas publikācijas)</li>
+          </ul>
+        </li>
+        <li><a href="details.html#fall2021">Detalizētāk par rudeni 2021</a></li>
+      </ul>
+    </section>
+
+    <!-- LU -->
+    <section id="lu" class="summary" style="margin-top:2rem;">
+      <h2 style="font-family:var(--font-heading);">Latvijas Universitāte (E-studijas)</h2>
+      <p>
+        Latvijas Universitātē darbojas modernizēts E-studijas portāls, bāzēts uz Moodle, kas ļauj
+        pasniedzējiem pielāgot kursu izskatu (attēli, struktūra) un izmantot video konferences
+        – BigBlueButton (BBB), nodrošinot tiešsaistes nodarbības un to ierakstus. Lekcijas un
+        mācību materiāli tiek glabāti mākonī, nodrošinot piekļuvi no jebkuras vietas. LU E-studiju
+        vide ietver arī MS Teams integrāciju un atbalstu jaunajiem kursiem. Papildus, LU ir daļa no
+        FORTHEM Digital Academy, kas apvieno vairākas digitālās mācību platformas.
+      </p>
+      <ul>
+        <li>
+          <strong>Galvenās iezīmes:</strong>  
+          <ul>
+            <li>Video konferences ar BigBlueButton (tiešraide un ieraksti)</li>
+            <li>Pasniedzējiem iespēja pielāgot kursa attēlus, video un dokumentus</li>
+            <li>MS Teams kursu integrācija ar Moodle</li>
+            <li>Mākonī glabātas lekcijas un materiāli, pieejami 24/7</li>
+            <li>FORTHEM Digital Academy — virtuālā mobilitāte un MOOC kursi</li>
+          </ul>
+        </li>
+        <li><a href="details.html#spring2022">Detalizētāk par pavasari 2022</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container" id="contacts">
+    <p>
+      © 2025 Vārds Uzvārds | 
+      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
+      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
+      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/theme-toggle.js" defer></script>
+
+  <!-- Comparison Script -->
+<script>
+  // Keyed by an ID we can reference in <select>
+  const profiles = {
+    "r6vsk": {
+      name: "R6vsk (EduPage)",
+      platforma: "EduPage (šifrēti, serveros balstīti stundu saraksti un paziņojumi)",
+      ieviešanasGads: "2018",
+      eMācībuFunkcijas: "Tiešsaistes stundas, paziņojumi, mājasdarbu augšupielādes, vienkārši testi",
+      mākonīSaglabātasLekcijas: "Nē",
+      valoduAtbalsts: "Tikai latviešu",
+      pielāgotasTēmas: "Nē",
+      personalizētaMācīšanās: "Nē"
+    },
+    "riseba": {
+      name: "RISEBA (e.RISEBA)",
+      platforma: "Moodle bāzēta e.RISEBA",
+      ieviešanasGads: "2006",
+      eMācībuFunkcijas: "Kursa materiāli, forumi, testi, vērtēšanas žurnāls",
+      mākonīSaglabātasLekcijas: "Daļēji (ierakstīti webināri)",
+      valoduAtbalsts: "Latviešu un angļu",
+      pielāgotasTēmas: "Nē (standarta Moodle tēma)",
+      personalizētaMācīšanās: "Jā (Digiteka ar Motival prasmju novērtēšanu)"
+    },
+    "lu": {
+      name: "LU (E-studijas)",
+      platforma: "Moodle bāzētas E-studijas",
+      ieviešanasGads: "2015 (pārveidojums)",
+      eMācībuFunkcijas: "Video konferences (BBB), ierakstītas lekcijas, uzlaboti testi",
+      mākonīSaglabātasLekcijas: "Jā (BigBlueButton + mākonis)",
+      valoduAtbalsts: "Latviešu un angļu moduļi",
+      pielāgotasTēmas: "Jā (kursu attēlu pielāgošana)",
+      personalizētaMācīšanās: "Plānots (valsts digitalizācijas iniciatīva)"
+    }
+  };
+
+  // Normalize a string into a set of lowercase “words”
+  function tokenize(val) {
+    return val
+      .toLowerCase()
+      .split(/[^a-zāčēģīķļņōŗšūž0-9]+/u) // split on non-word (includes Latvian chars)
+      .filter(Boolean);
+  }
+
+  // Count how many languages are listed in a Latvian phrase
+  function countLanguages(val) {
+    // Split on " un " (Latvian "and") or commas, then count non-empty pieces
+    return val
+      .toLowerCase()
+      .split(/,|\s+un\s+/u)
+      .map(s => s.trim())
+      .filter(Boolean).length;
+  }
+
+  // Called whenever a user changes either dropdown
+  function renderComparison() {
+    const leftKey  = document.getElementById("selectA").value;
+    const rightKey = document.getElementById("selectB").value;
+
+    // If they choose the same institution, show a message
+    if (leftKey === rightKey) {
+      document.getElementById("comparisonTable").innerHTML =
+        "<p style='color: var(--text-secondary);'>Izvēlējies divas atšķirīgas iestādes salīdzināšanai.</p>";
+      return;
+    }
+
+    const leftProfile  = profiles[leftKey];
+    const rightProfile = profiles[rightKey];
+
+    let html = "<table class='compare-table'>";
+    html += "<thead><tr>"
+          + `<th style="width: 25%;"></th>`
+          + `<th style="width: 37.5%;">${leftProfile.name}</th>`
+          + `<th style="width: 37.5%;">${rightProfile.name}</th>`
+          + "</tr></thead><tbody>";
+
+    for (const key in leftProfile) {
+      if (key === "name") continue;
+
+      const leftVal  = leftProfile[key];
+      const rightVal = rightProfile[key];
+
+      let same = false;
+      if (key === "valoduAtbalsts") {
+        // Special case: compare number of languages
+        same = (countLanguages(leftVal) === countLanguages(rightVal));
+      } else {
+        // Default: check if any word appears in both strings
+        const leftWords  = new Set(tokenize(leftVal));
+        const rightWords = new Set(tokenize(rightVal));
+        for (const w of leftWords) {
+          if (rightWords.has(w)) {
+            same = true;
+            break;
+          }
+        }
+      }
+
+      html += `<tr>
+        <td class="prop-name">${formatKey(key)}</td>
+        <td class="prop-val ${same ? "same-cell" : "diff-cell"}">${leftVal}</td>
+        <td class="prop-val ${same ? "same-cell" : "diff-cell"}">${rightVal}</td>
+      </tr>`;
+    }
+
+    html += "</tbody></table>";
+    document.getElementById("comparisonTable").innerHTML = html;
+  }
+
+  // Format keys like "ieviešanasGads" → "Year Introduced"
+  function formatKey(k) {
+    return k
+      .replace(/([A-Z])/g, " $1")
+      .replace(/^./, str => str.toUpperCase());
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("selectA").addEventListener("change", renderComparison);
+    document.getElementById("selectB").addEventListener("change", renderComparison);
+    renderComparison();
+  });
+</script>
+
+</body>
+</html>
