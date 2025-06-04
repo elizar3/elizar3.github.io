@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
+  <script>
+      (function(){
+        const t = localStorage.getItem('site-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Salīdzinājums - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
@@ -90,10 +97,25 @@
           </select>
         </label>
       </div>
-    </section>
+    </section>  <!-- end of compare-selector -->
 
-    <!-- Placeholder where the comparison table will be injected -->
-    <section id="comparisonTable" class="summary" style="margin-top:1rem;"></section>
+    <!-- comparison+venn wrapper -->
+<section class="summary comparison-wrapper">
+  <!-- Placeholder where the comparison table will be injected -->
+  <div id="comparisonTable" class="comparison-table"></div>
+
+  <!-- Venn Diagram Visualization -->
+  <div class="venn-visual">
+    <figure>
+      <img src="images/venn-diagram.png"
+           alt="Venn diagramma salīdzinājumam"
+           style="width:100%; height:auto;" />
+      <figcaption style="text-align:center; font-size:0.9rem; color:var(--text-secondary);">
+        Venn diagramma — kopīgās un atšķirīgās īpašības
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
     <!-- Section tabs -->
     <section class="summary">
@@ -186,9 +208,8 @@
   <footer class="container" id="contacts">
     <p>
       © 2025 Vārds Uzvārds | 
-      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
-      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/elīza-riekstiņa-8471082a2" target="_blank">LinkedIn</a> | 
+      <a href="mailto:eliza.riekstina@pm.me">you@uni.lv</a>
     </p>
   </footer>
 

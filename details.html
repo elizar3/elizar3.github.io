@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
+  <script>
+      (function(){
+        const t = localStorage.getItem('site-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Detalizēti - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
@@ -77,6 +84,13 @@
         2020. gada marta beigās Latvijā, tāpat kā daudzviet pasaulē, tika ieviesti plaši ierobežojumi klātienes mācībām, jo to pieprasīja Covid-19 pandēmijas izraisītā situācija. Rīgas 6. vidusskola (R6vsk) ātri pārgāja uz attālināto mācību režīmu, galvenokārt izmantojot <strong>EduPage</strong> mācību platformu, kas jau tika lietots stundu sarakstu un paziņojumu pārvaldībai, taču pandēmijas laikā kļuva par galveno vidi gan materiālu publicēšanai, gan tiešsaistes nodarbību organizēšanai.
       </p>
 
+      <!-- Attēla vietturis -->
+      <img
+        src="images/r6vsk.jpg"
+        alt="Rīgas 6. vidusskolas ēka"
+        class="building-img"
+      />
+
       <h4>1. EduPage lietošanas īpatnības</h4>
       <ul>
         <li>
@@ -105,9 +119,6 @@
           <strong>Skolas atbalsts:</strong> tikšanās (tiešsaistē) ar IT dienestu, promtotot īsas pamācības par EduPage lietošanu, lai palielinātu digitālo pratību.
         </li>
       </ol>
-
-      <!-- Attēla vietturis -->
-      <!-- <img src="images/school-spring2020.png" alt="R6vsk EduPage pavasara 2020 ekrānuzņēmums"> -->
     </section>
 
     <!-- Pirmā universitāte – Rudens 2021 -->
@@ -116,6 +127,13 @@
       <p>
         2021. gada rudens semestrī RISEBA pilnveidoja savu <strong>e.RISEBA</strong> Moodle vidi, ņemot vērā hibrīdās studiju prasības. e.RISEBA kļuva par galveno vidi kursu materiālu publicēšanai, forumu vadībai un video lekcijām, ko pasniedzēji nodrošināja gan <strong>Zoom</strong>, gan <strong>MS Teams</strong> ietvaros.
       </p>
+
+      <!-- Attēla vietturis -->
+      <img
+        src="images/riseba.jpg"
+        alt="RISEBA H2O6 ēka"
+        class="building-img"
+      />
 
       <h4>1. e.RISEBA galvenās funkcionalitātes un atjauninājumi</h4>
       <ul>
@@ -149,9 +167,6 @@
           <strong>E-mācību aktivitāšu žurnāla analīze:</strong> kursu koordinatori pārskatīja studentu iesaisti (testu izpildi, video skatīšanās laiku) vismaz reizi nedēļā.
         </li>
       </ol>
-
-      <!-- Attēla vietturis -->
-      <!-- <img src="images/uni1-fall2021.png" alt="RISEBA e.RISEBA rudens 2021 ekrānuzņēmums"> -->
     </section>
 
     <!-- LU – Pavasaris 2022 -->
@@ -160,6 +175,13 @@
       <p>
         2022. gada pavasarī Latvijas Universitāte (LU) turpināja attīstīt savu <strong>E-studijas</strong> platformu, balstītu uz Moodle. Galvenais uzsvars bija uz <strong>BigBlueButton (BBB)</strong> video konferenču integrāciju, kursu vizuālā noformējuma uzlabojumiem un <strong>MS Teams</strong>/<strong>OneDrive</strong> savienojumu.
       </p>
+
+      <!-- Attēla vietturis -->
+      <img
+        src="images/lu.jpg"
+        alt="Latvijas Universitātes galvenā ēka"
+        class="building-img"
+      />
 
       <h4>1. Galvenie E-studiju uzlabojumi</h4>
       <ul>
@@ -196,9 +218,6 @@
           <strong>Studentu digitālo prasmju uzlabošana:</strong> fakultāte rīkoja seminārus par datu pārvaldību Moodle, autortiesību jautājumiem un informācijas kvalitātes novērtēšanu tiešsaistes avotos.
         </li>
       </ol>
-
-      <!-- Attēla vietturis -->
-      <!-- <img src="images/lu-spring2022.png" alt="LU E-studijas pavasara 2022 ekrānuzņēmums"> -->
     </section>
   </main>
 
@@ -206,9 +225,8 @@
   <footer class="container" id="contacts">
     <p>
       © 2025 Vārds Uzvārds | 
-      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
-      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/elīza-riekstiņa-8471082a2" target="_blank">LinkedIn</a> | 
+      <a href="mailto:eliza.riekstina@pm.me">you@uni.lv</a>
     </p>
   </footer>
 

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
+  <script>
+      (function(){
+        const t = localStorage.getItem('site-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      })();
+    </script>
+    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Par mani - Salīdzinājums: Skola vs. Universitātes (Digitāli)</title>
@@ -81,11 +88,16 @@
     <!-- About Me Section -->
     <section class="summary">
       <h2 style="font-family:var(--font-heading); margin-bottom: 1rem;">Par mani</h2>
+
+      <!-- Selfie moved here -->
+      <img src="images/selfie.jpg"
+           alt="Autores Elīzas selfijs"
+           class="selfie" />
+
       <p>
-        Sveiki! Es esmu <strong>Elīza</strong>, students/studente, kas pēta digitālo tehnoloģiju 
+        Sveiki! Es esmu <strong>Elīza</strong>, studente, kas pēta digitālo tehnoloģiju 
         izmantošanu izglītībā. Šis projekts ir daļa no <strong>Tīmekļa dizaina pamatu</strong> 
-        kursa, kurā mēs pētījām, kā dažādas izglītības iestādes izmanto digitālos rīkus 
-        mācību procesa uzlabošanai.<br><br>
+        kursa, kurā mēs pētījām tīmekļa dizainus, kas tos padara labus un no kā izvairīties.<br><br>
         
         Mans mērķis bija salīdzināt trīs dažādas izglītības iestādes - vidusskolu un divas 
         universitātes - lai saprastu, kā digitālie rīki var atšķirties atkarībā no izglītības 
@@ -149,17 +161,12 @@
         <h3 style="font-family:var(--font-heading); margin-bottom: 1rem;">Sociālie tīkli un kontakti</h3>
         <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
           <li>
-            <a href="https://linkedin.com/in/you" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
+            <a href="https://linkedin.com/in/elīza-riekstiņa-8471082a2" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
               💼 LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/you" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
-              💻 GitHub
-            </a>
-          </li>
-          <li>
-            <a href="mailto:you@uni.lv" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
+            <a href="mailto:eliza.riekstina@pm.me" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
               📧 E-pasts
             </a>
           </li>
@@ -191,9 +198,8 @@
   <footer class="container" id="contacts">
     <p>
       © 2025 Vārds Uzvārds | 
-      <a href="https://linkedin.com/in/you" target="_blank">LinkedIn</a> | 
-      <a href="mailto:you@uni.lv">you@uni.lv</a> | 
-      <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/elīza-riekstiņa-8471082a2" target="_blank">LinkedIn</a> | 
+      <a href="mailto:eliza.riekstina@pm.me">you@uni.lv</a>
     </p>
   </footer>
 

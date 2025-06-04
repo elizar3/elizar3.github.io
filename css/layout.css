@@ -125,6 +125,50 @@ header.app-bar .logo-sep {
   line-height: 1.6;
 }
 
+/* Float tall selfie left in summary text */
+.summary .selfie {
+  float: left;
+  height: 140px;        /* tweak as needed */
+  width: auto;
+  margin: 0 1rem 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Mobile: center below heading */
+@media (max-width: 600px) {
+  .summary .selfie {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+    height: 150px;      /* smaller on narrow screens */
+  }
+}
+
+/* ─────────── Venn diagram sidebar ─── */
+.summary.venn-visual {
+  float: right;
+  width: 280px;               /* sidebar width */
+  margin: 0 0 1.5rem 1.5rem;  /* gap to main content */
+}
+
+.summary.venn-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* on narrow screens stack it above the table */
+@media (max-width: 768px) {
+  .summary.venn-visual {
+    float: none;
+    width: auto;
+    margin: 1rem auto;
+  }
+}
+
 /* ─────────── Main Content: Comparison Cards ─────────── */
 
 .main-cards {
@@ -879,4 +923,57 @@ footer a:hover {
 /* Override any conflicting transitions */
 .theme-transitions-enabled .nav-list li a {
   transition: background 0.3s, color 0.3s !important;
+}
+.selfie {
+  display: block;
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin: 1rem auto 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ─── Side-by-side comparison + venn ─── */
+.comparison-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.comparison-wrapper .comparison-table {
+  flex: 1;
+}
+
+.comparison-wrapper .venn-visual {
+  flex: 0 0 280px;
+}
+
+/* stack on smaller screens */
+@media (max-width: 768px) {
+  .comparison-wrapper {
+    display: block;
+  }
+  .comparison-wrapper .comparison-table,
+  .comparison-wrapper .venn-visual {
+    margin: 1rem 0;
+    width: auto;
+  }
+}
+
+/* wrap text around building images */
+.building-img {
+  float: right;
+  width: 300px;
+  height: auto;
+  margin: 0 0 1rem 1rem;
+  border-radius: 4px;
+}
+
+/* on narrow screens, stack and center */
+@media (max-width: 600px) {
+  .building-img {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
 }
