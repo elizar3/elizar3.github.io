@@ -36,9 +36,38 @@
         <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
           🌓
         </button>
+
+        <!-- Mobile Hamburger Menu -->
+        <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+  <!-- Mobile Slide-out Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Sākums</a></li>
+        <li><a href="comparison.html" class="active">Salīdzinājums</a></li>
+        <li><a href="details.html">Detalizēti</a></li>
+        <li><a href="about.html">Par mani</a></li>
+        <li><a href="#contacts">Kontakti</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-theme-toggle">
+      <button id="mobile-theme-toggle">
+        🌓 <span>Mainīt tēmu</span>
+      </button>
+    </div>
+  </div>
 
   <main class="container">
     <!-- Two dropdowns for selecting profiles -->
@@ -165,6 +194,7 @@
 
   <!-- JS -->
   <script src="js/theme-toggle.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
 
   <!-- Comparison Script -->
 <script>

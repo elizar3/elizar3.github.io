@@ -36,19 +36,155 @@
         <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
           🌓
         </button>
+
+        <!-- Mobile Hamburger Menu -->
+        <button class="hamburger-menu" id="hamburger-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <h2 style="font-family:var(--font-heading);">Par mani un projekta fona stāstu</h2>
-    <p>Īss teksts par tevi, kursa prasībām utt.</p>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
 
-    <h3 style="font-family:var(--font-heading); margin-top:2rem;">Sociālo mediju saites</h3>
-    <ul>
-      <li><a href="https://linkedin.com/in/you">LinkedIn</a></li>
-      <li><a href="https://github.com/you">GitHub</a></li>
-    </ul>
+  <!-- Mobile Slide-out Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html">Sākums</a></li>
+        <li><a href="comparison.html">Salīdzinājums</a></li>
+        <li><a href="details.html">Detalizēti</a></li>
+        <li><a href="about.html" class="active">Par mani</a></li>
+        <li><a href="#contacts">Kontakti</a></li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-theme-toggle">
+      <button id="mobile-theme-toggle">
+        🌓 <span>Mainīt tēmu</span>
+      </button>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Par mani un projektu</h1>
+      <p>
+        Uzzini vairāk par projekta autoru un tā izstrādes procesu
+      </p>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="summary">
+      <h2 style="font-family:var(--font-heading); margin-bottom: 1rem;">Par mani</h2>
+      <p>
+        Sveiki! Es esmu <strong>Elīza</strong>, students/studente, kas pēta digitālo tehnoloģiju 
+        izmantošanu izglītībā. Šis projekts ir daļa no <strong>Tīmekļa dizaina pamatu</strong> 
+        kursa, kurā mēs pētījām, kā dažādas izglītības iestādes izmanto digitālos rīkus 
+        mācību procesa uzlabošanai.<br><br>
+        
+        Mans mērķis bija salīdzināt trīs dažādas izglītības iestādes - vidusskolu un divas 
+        universitātes - lai saprastu, kā digitālie rīki var atšķirties atkarībā no izglītības 
+        līmeņa un iestādes specifiskajām vajadzībām.
+      </p>
+    </section>
+
+    <!-- Project Background Section -->
+    <section class="summary">
+      <h2 style="font-family:var(--font-heading); margin-bottom: 1rem;">Projekta fons</h2>
+      <p>
+        <strong>Kursa prasības:</strong> Izveidot responsīvu tīmekļa vietni, kas demonstrē 
+        HTML, CSS un JavaScript prasmes, kā arī spēju strādāt ar dizaina principiem un 
+        lietotāju pieredzi.<br><br>
+        
+        <strong>Izvēlētā tēma:</strong> Digitālo rīku salīdzinājums izglītībā ir aktuāla 
+        tēma, jo COVID-19 pandēmija paātrināja digitalizācijas procesu visās izglītības 
+        jomās. Bija interesanti uzzināt, kā dažādas iestādes pielāgojās šīm izmaiņām.<br><br>
+        
+        <strong>Tehnoloģijas:</strong> Vietne ir veidota izmantojot tīru HTML5, CSS3 un 
+        JavaScript, bez ārējiem framework'iem, lai demonstrētu pamata tīmekļa izstrādes prasmes.
+      </p>
+    </section>
+
+    <!-- Experience Cards -->
+    <section class="main-cards">
+      <div class="card school">
+        <h3>Rīgas 6. vidusskola</h3>
+        <p>
+          Mana pieredze vidusskolā ar EduPage platformu. Uzzināju, kā skolēni un skolotāji 
+          izmanto digitālos rīkus ikdienas mācību procesā.
+        </p>
+      </div>
+
+      <div class="card riseba">
+        <h3>RISEBA</h3>
+        <p>
+          Pirmā universitātes pieredze ar e.RISEBA sistēmu un Digiteka platformu. 
+          Iepazinos ar augstākās izglītības digitālajiem risinājumiem.
+        </p>
+      </div>
+
+      <div class="card lu">
+        <h3>Latvijas Universitāte</h3>
+        <p>
+          Modernizētā E-studijas platforma ar video konferencēm un mākoņa risinājumiem. 
+          Pieredze ar mūsdienīgākajiem universitātes digitālajiem rīkiem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="summary">
+      <h2 style="font-family:var(--font-heading); margin-bottom: 1rem;">Sazināties ar mani</h2>
+      <p>
+        Ja jums ir jautājumi par šo projektu vai vēlaties apspriest digitālo rīku izmantošanu 
+        izglītībā, droši sazinieties!
+      </p>
+      
+      <div style="margin-top: 1.5rem;">
+        <h3 style="font-family:var(--font-heading); margin-bottom: 1rem;">Sociālie tīkli un kontakti</h3>
+        <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 1rem;">
+          <li>
+            <a href="https://linkedin.com/in/you" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
+              💼 LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/you" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
+              💻 GitHub
+            </a>
+          </li>
+          <li>
+            <a href="mailto:you@uni.lv" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--bg-secondary); border-radius: 6px; text-decoration: none; transition: background 0.3s;">
+              📧 E-pasts
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="summary">
+      <h2 style="font-family:var(--font-heading); margin-bottom: 1rem;">Projekta statistika</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div style="text-align: center; padding: 1rem; background: var(--bg-secondary); border-radius: 8px; border: 2px solid var(--accent-school);">
+          <h4 style="font-family: var(--font-heading); color: var(--accent-school); margin-bottom: 0.5rem;">3</h4>
+          <p style="margin: 0; color: var(--text-secondary);">Salīdzinātās iestādes</p>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: var(--bg-secondary); border-radius: 8px; border: 2px solid var(--accent-riseba);">
+          <h4 style="font-family: var(--font-heading); color: var(--accent-riseba); margin-bottom: 0.5rem;">4</h4>
+          <p style="margin: 0; color: var(--text-secondary);">HTML lapas</p>
+        </div>
+        <div style="text-align: center; padding: 1rem; background: var(--bg-secondary); border-radius: 8px; border: 2px solid var(--accent-lu);">
+          <h4 style="font-family: var(--font-heading); color: var(--accent-lu); margin-bottom: 0.5rem;">100%</h4>
+          <p style="margin: 0; color: var(--text-secondary);">Responsīvs dizains</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -63,5 +199,6 @@
 
   <!-- JS -->
   <script src="js/theme-toggle.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
 </body>
 </html>
